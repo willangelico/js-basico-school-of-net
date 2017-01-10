@@ -1,0 +1,53 @@
+	<script>
+	console.log("Teste");
+
+	function Hello(name){
+		return "Hello "+name;
+	}
+
+	// Single line comment
+
+	/* 
+		Multiple
+		lines
+		comments
+	*/
+
+	// alert( Hello("word") );
+	console.log( Hello("word") );
+
+
+	//********* VARIÁVEIS ***************
+
+	var x = 45; // Variável global
+
+	if(true){
+		let x = 10; // Variavél somente dentro do escopo
+		console.log(x);
+	}
+
+	console.log(x);
+
+	//********* TIPOS - DINAMICAMENTE TIPADA - Convertidos automaticamentes ***************
+
+	var abc = 42; // Inteiro
+	abc = "New value" // Convertido para String
+	console.log(abc);
+
+
+	var x = "String " + 43; // Converte o inteiro para string
+	var y = 30 + " string"; // Converte o inteiro para string
+	console.log(x);
+	console.log(y);
+
+	x = "15"-5; //Converte string em inteiro
+	console.log(x);
+
+	x = parseInt("15") + 5; 
+	console.log(x);
+
+	x = parseFloat("15.7") + 5; 
+	console.log(x);
+
+
+</script>

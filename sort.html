@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array</title>
+	</head>
+	<body>
+		<h1>SORT in Array in JS</h1>
+		<script>
+			
+			//********* SORT() ***************
+			document.write("<h3>sort()</h3>");
+
+			var arr1 = new Array(5,3,4,2,0,1);
+			arr1.sort();
+
+
+
+			document.write("<p> sort(): "+arr1+"</p>");
+			console.log("sort() : ");
+			console.log(arr1);
+
+		
+			
+		</script>
+
+		<script>
+			
+			//********* SORT() ***************
+			document.write("<h3>SORT if callback in JS()</h3>");
+
+			var arr1 = new Array(5,3,4,2,0,1);
+			
+			function desc(a,b){
+				if(a > b){
+					return -1;
+				}
+				if(a < b){
+					return 1;
+				}
+				if(a === b){
+					return 0;
+				}
+			}
+
+			arr1.sort(desc);
+
+
+
+			document.write("<p> sort if callback(): "+arr1+"</p>");
+			console.log("sort if callback() : ");
+			console.log(arr1);
+
+		
+			
+		</script>
+	</body>
+</html>

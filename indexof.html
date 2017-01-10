@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array</title>
+	</head>
+	<body>
+		<h1>Search</h1>
+		<script>
+			
+			//********* INDEXOF() ***************
+			document.write("<h3>indexof()</h3>");
+
+			var arr1 = ["orange","blue","red","blue","green"];
+
+			var ret = arr1.indexOf("blue");
+
+			document.write("<p> Ret:" + ret + " value = " + arr1[ret] + "</p>");
+			console.log("indexOf() Ret:" + ret + " value = " + arr1[ret]);
+		
+		</script>
+
+
+		<script>
+			
+			//********* INDEXOF(N) ***************
+			document.write("<h3>indexof(element,index)</h3>");
+
+			var arr1 = ["orange","blue","red","blue","green"];
+
+			var ret = arr1.indexOf("blue",2);
+
+			document.write("<p> Ret:" + ret + " value = " + arr1[ret] + "</p>");
+			console.log("indexOf() Ret:" + ret + " value = " + arr1[ret]);
+			
+		</script>
+
+		<script>
+			
+			//********* LASTINDEXOF() ***************
+			document.write("<h3>lastIndexOf()</h3>");
+
+			var arr1 = ["orange","blue","red","blue","green","orange"];
+
+			var ret = arr1.lastIndexOf("blue");
+
+			document.write("<p> Ret:" + ret + " value = " + arr1[ret] + "</p>");
+			console.log("lastIndexOf() Ret:" + ret + " value = " + arr1[ret]);
+			
+		</script>
+
+		<script>
+			
+			//********* LASTINDEXOF(N) ***************
+			document.write("<h3>lastIndexOf(element,index)</h3>");
+
+			var arr1 = ["orange","blue","red","blue","green","orange"];
+
+			var ret = arr1.lastIndexOf("blue",2);
+
+			document.write("<p> Ret:" + ret + " value = " + arr1[ret] + "</p>");
+			console.log("lastIndexOf() Ret:" + ret + " value = " + arr1[ret]);
+			
+		</script>
+
+		<strong>Search in Practice</strong>
+		<br />
+		<input type="text" id="search">
+		<button onclick="search();">Search</button>
+		<br />
+		<strong>Result:</strong>
+		<br />
+		<span id="result"></span>
+		<script>
+			function search(){
+				var arr = ["Lorem ipsum dolor sit amet","consectetur adipisicing elit", "Fuga eveniet nihil","est amet voluptas fugiat quaerat perspiciatis"];
+				var search = document.getElementById("search").value;
+				var testKey = null;
+				var result = "";
+
+				for(var key in arr){
+					var auxArr = arr[key].split(" ");
+					for(var k2 in auxArr){
+						if(auxArr.indexOf(search) > -1){
+							if(testKey != key){
+								testKey = key;
+								result += "<p>" + arr[key] + "</p>"; 
+							}
+						}
+					}
+				}
+				document.getElementById("result").innerHTML = result;
+			}
+		</script>
+
+	</body>
+</html>

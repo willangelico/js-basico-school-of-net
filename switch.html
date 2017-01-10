@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Array</title>
+	</head>
+	<body>
+		<h1>Switch</h1>
+		<script>
+			var color = "red";
+
+			switch(color){
+				case "orange":
+					document.write("Laranja");
+					break;
+				case "red":
+					document.write("Vermelho");
+					break;
+				case "blue":
+					document.write("Azul");
+					break;
+				default:
+					document.write("Nenhum");
+			}
+
+
+		</script>
+
+		<p>Balança</p>
+		<input type="text" id="peso" placeholder="Peso" />
+		<br />
+		<select id="frutas">
+			<option value="maça">Maçã</option>
+			<option value="melancia">Melancia</option>
+			<option value="limao">Limão</option>
+		</select>
+		<br />
+		<button onclick="pesar();">Pesar</button>
+		<br />
+		<span id="result"></span>
+
+		<script>
+			function pesar(){
+				var p = document.getElementById("peso").value;
+				var f = document.getElementById("frutas").value;
+				var t;
+				if(!p){
+					document.getElementById("result").innerHTML = "Insira o peso";
+					return;
+				}
+				switch(f){
+					case "maça":
+						t = p * 1;
+						break;
+					case "melancia":
+						t = p * 2;
+						break;
+					case "limao":
+						t = p * 3;
+						break;
+					default:
+						t = "selecione  a fruta";
+
+				}
+				document.getElementById("result").innerHTML = t;
+			}
+
+		</script>
+
+	</body>
+</html>
